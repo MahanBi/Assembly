@@ -1,3 +1,4 @@
+; x86
 section	.text
    global _start	 ;must be declared for linker (gcc)
 	
@@ -18,6 +19,6 @@ _start:	         ;tell linker entry point
    int	0x80     ;call kernel
 	
 section	.data
-msg db 'Displaying 9 stars',0xa ;a message
-len equ $ - msg  ;length of message
-s2 times 9 db '*'
+   msg db 'Displaying 9 stars',0xa ;a message
+   len equ $ - msg  ;length of message
+   times 9 db '*'
